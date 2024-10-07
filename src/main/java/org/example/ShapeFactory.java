@@ -8,7 +8,7 @@ public class ShapeFactory {
         else if(shapeType.equalsIgnoreCase("rectangle")){
             return new Rectangle(x,y,parameters[0],parameters[1]);
         }
-        else if(shapeType.equalsIgnoreCase(("square)"))){
+        else if(shapeType.equalsIgnoreCase(("square"))){
             return new Square(x,y,parameters[0]);
         }
 

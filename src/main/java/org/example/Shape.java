@@ -1,6 +1,6 @@
 package org.example;
 
-abstract class Shape {
+public abstract class Shape {
     private double x;
     private double y;
     public Shape(double x, double y) {
