@@ -1,6 +1,9 @@
 import org.junit.jupiter.api.Test;
 import org.example.*;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ShapeTester {
@@ -53,10 +56,20 @@ public class ShapeTester {
     }
 
     @Test
-    public void orderPrinter3(){
-        Shape circle = new Circle(0,0,10);
-        assertEquals(0.0, circle.getX());
+    public void testSortShapesByArea() {
+        Shape circle = new Circle(1, 2, 3);
+        Shape square = new Square(3, 4, 5);
+        Shape rectangle = new Rectangle(2, 3, 6, 4);
+
+        List<Shape> shapeList = Arrays.asList(circle, square, rectangle);
+        ShapeSorter sorter = new ShapeSorter();
+        List<Shape> sortedShapes = sorter.printOrderShapes(shapeList);
+
+        assertEquals(rectangle, sortedShapes.get(0));
+        assertEquals(square, sortedShapes.get(1));
+        assertEquals(circle, sortedShapes.get(2));
     }
+
 
 
 }

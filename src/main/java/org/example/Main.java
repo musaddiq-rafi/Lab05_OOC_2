@@ -12,5 +12,6 @@ public class Main {
         List<Shape> shapes = Arrays.asList(circle,rectangle,square);
 
         OrderPrinter.printOrderShapes(shapes);
+
     }
 }
