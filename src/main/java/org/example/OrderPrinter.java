@@ -18,13 +18,15 @@ public class OrderPrinter {
                 if (xCompare!=0){
                     return xCompare;
                 }
-                int yCompare = Double.compare(o1.getY(),o2.getY());
-                if (yCompare!=0){
-                    return yCompare;
+                return Double.compare(o1.getY(),o2.getY());
+
                 }
-                return 0;
-            }
-        });
+
+            });
+            for (Shape shape: shapes){
+                System.out.println(shape.getClass().getSimpleName()+"-Area: "+shape.area()+" X coordinate:"+shape.getX()+" Y coordinate:"+shape.getY());
+
+        }
     }
 
 
